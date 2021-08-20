@@ -55,7 +55,7 @@ const promptManager = () => {
                     return false;
                 }
             }
-        }
+        },
         {
             type: 'list',
             name: 'menu',
@@ -139,11 +139,89 @@ const promptEmployee = employeeData => {
         }
     });
 };
+const promptIntern = internData => {
+    console.log(`
+    ===============
+    Add a New Intern
+    ===============
+    `);
+
+    // If there's no 'employees' array property, create one
+    if (!internData.interns) {
+        internData.interns = [];
+    }
+
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'internName',
+            message: 'What is the name of the intern? (Required)',
+            validate: internName => {
+                if (internName) {
+                    return true;
+                } else {
+                    console.log('Please enter the name of the intern!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'employeeID',
+            message: 'Enter your employee ID (Required)',
+            validate: employeeId => {
+                if (employeeId) {
+                    return true;
+                } else {
+                    console.log('Please enter your employee ID!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter your email address (Required)',
+            validate: email => {
+                if (email) {
+                    return true;
+                } else {
+                    console.log('Please enter your email address!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'githubUsername',
+            message: 'Enter your Github username. (Required)',
+            validate: githubUsername => {
+                if (githubUsername) {
+                    return true;
+                } else {
+                    console.log('Please enter your Github username!');
+                    return false;
+                }
+            }
+        }
+    ]).then(internData => {
+        internData.interns.push(internData);
+        if (internData.confirmAddIntern) {
+            return promptIntern(internData);
+        } else {
+            return internData;
+        }
+    });
+};
 
 promptManager()
     .then(promptEmployee)
     .then(employeeData => {
         return generatePage(employeeData);
+    })
+    .then(promptInter)
+    .then(internData => {
+        return generatePage(internData);
     })
     .then(pageHTML => {
         return writeFile(pageHTML);
