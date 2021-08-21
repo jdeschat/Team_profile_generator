@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/jdeschat/Team_profile_generator#readme",
   "dependencies": {
-    "inquirer": "^8.1.2"
+    "inquirer": "^8.1.2",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "jest": "^27.0.6"
