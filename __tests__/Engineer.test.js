@@ -20,8 +20,8 @@ test('test if we can get the email from the getEmail() method', () => {
     expect(engineer.getEmail()).toBe('jdeschat@gmail.com');
 });
 
-test('test if we can get the github username from the getGithubUsername() method', () => {
-    expect(engineer.getGithubUsername()).toBe('jdeschat');
+test('test if we can get the github username from the getGithub() method', () => {
+    expect(engineer.getGithub()).toBe('jdeschat');
 });
 
 test('test if we can get the role from the getRole() method', () => {
