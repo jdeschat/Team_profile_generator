@@ -21,7 +21,7 @@
 
   To install this application, clone the code into your terminal for the respective repository. Then, install npm by entering the command ```npm init```  into the terminal. Inquirer must then be installed by entering ```npm install inquirer```. Finally, the program can then be run by entering ```node develop/index.js``` into the command line, and answering each question appropriately.
 
-  `/`/`JavaScript
+  ```JavaScript
 
   npm install inquirer
 
@@ -40,7 +40,7 @@
         // Something else went wrong
       }
     });
- `/`/`
+ ```
  
   ## Usage
   Inquirer is easiest to use when installed with npm:  ``` npm install inquirer ```. Then you can load the module into your code with a require call: ``` const inquirer = require(‘inquirer’); ```
@@ -71,5 +71,5 @@ Made with [contributors-img](https://contrib.rocks).
   You can reach me at jdeschat@gmail.com with additional questions.
   
   Below are links to my demo video and the video location on my Github, respectfully:
-  - [Link to Demo Video](https://www.youtube.com/)
+  - [Link to Demo Video](https://youtu.be/bJY3KfM77pc)
   - [Video location in Github](https://github.com/jdeschat/Team_profile_generator/tree/main/assets/video)
