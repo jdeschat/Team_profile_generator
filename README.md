@@ -15,6 +15,7 @@ When prompted for team members and their information, then an HTML is generated 
 - [License](#license)
 - [Contributors](#contributors)
 - [Tests](#tests)
+- [Technology Used](#technology-used)
 - [Questions](#questions)
 
 ## Installation
